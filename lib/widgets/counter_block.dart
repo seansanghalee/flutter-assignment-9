@@ -1,5 +1,6 @@
 import 'package:assignment_9/widgets/time_card.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class CounterBlock extends StatelessWidget {
   final int seconds;
@@ -19,11 +20,23 @@ class CounterBlock extends StatelessWidget {
           TimeCard(
             time: seconds ~/ 60,
           ),
-          const Column(
-            children: [
-              Icon(Icons.circle),
-              Icon(Icons.circle),
-            ],
+          const DefaultTextStyle(
+            style: TextStyle(
+              fontSize: 24,
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: EdgeInsets.all(12),
+                  child: Text("🔮"),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(12),
+                  child: Text("🔮"),
+                ),
+              ],
+            ),
           ),
           TimeCard(
             time: seconds % 60,
