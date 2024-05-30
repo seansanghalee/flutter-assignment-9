@@ -1,3 +1,4 @@
+import 'package:assignment_9/helpers/helpers.dart';
 import 'package:assignment_9/widgets/time_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -18,7 +19,7 @@ class CounterBlock extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           TimeCard(
-            time: seconds ~/ 60,
+            time: Helpers.getMinutes(seconds: seconds),
           ),
           const DefaultTextStyle(
             style: TextStyle(
@@ -39,7 +40,7 @@ class CounterBlock extends StatelessWidget {
             ),
           ),
           TimeCard(
-            time: seconds % 60,
+            time: Helpers.getSeconds(seconds: seconds),
           ),
         ],
       ),

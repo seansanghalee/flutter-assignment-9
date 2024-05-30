@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TimeCard extends StatelessWidget {
-  final int time;
+  final String time;
 
   const TimeCard({
     super.key,
@@ -20,7 +20,7 @@ class TimeCard extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(20),
             child: Text(
-              "$time".padLeft(2, "0"),
+              time,
               style: const TextStyle(
                 color: Color(0xff4a0074),
                 fontSize: 69,
